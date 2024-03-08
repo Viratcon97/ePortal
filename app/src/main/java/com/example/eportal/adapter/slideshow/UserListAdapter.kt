@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eportal.R
-import java.util.ArrayList
+import com.example.eportal.ui.slideshow.User
 
-class UserListAdapter(private val usersArrayList: ArrayList<String>) : RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
+class UserListAdapter(private val usersArrayList: MutableList<User>) : RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_userlist, parent, false)
         return ViewHolder(view)
@@ -19,14 +19,18 @@ class UserListAdapter(private val usersArrayList: ArrayList<String>) : RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.textView.text = usersArrayList[position]
+        holder.textViewName.text = usersArrayList[position].name
+        holder.textViewCityName.text = usersArrayList[position].city
     }
 
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        val textView : TextView
+        val textViewName : TextView
+        val textViewCityName : TextView
         init {
-            textView = view.findViewById(R.id.userName)
+            textViewName = view.findViewById(R.id.userName)
+            textViewCityName = view.findViewById(R.id.userCity)
         }
+
     }
 
 }

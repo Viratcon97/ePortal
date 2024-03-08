@@ -45,13 +45,19 @@ class SlideshowFragment : Fragment() {
         userListRecyclerView.layoutManager = linearLayoutManager
 
         //Check if user list is empty or not
-        if(slideshowViewModel.recyclerView.isEmpty()){
+        if(slideshowViewModel.usersList.isEmpty()){
             //Show No Data Found
             userListRecyclerView.visibility = View.GONE
             errorNoDataFound.visibility = View.VISIBLE
         }else{
             //Show Users from List
-            val adapter = UserListAdapter(slideshowViewModel.recyclerView)
+
+            //Sorted List
+            //val list = slideshowViewModel.recyclerView.sorted().toMutableList()
+
+            //Normal List
+            val list = slideshowViewModel.usersList
+            val adapter = UserListAdapter(list)
             userListRecyclerView.adapter = adapter
         }
         return root
@@ -62,3 +68,7 @@ class SlideshowFragment : Fragment() {
         _binding = null
     }
 }
+data class User(
+    val name : String,
+    val city : String
+)

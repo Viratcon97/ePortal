@@ -9,8 +9,31 @@ class SlideshowViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"
     }
-    val recyclerView : ArrayList<String> = arrayListOf<String>("Alpha","Beta","Alpha","Beta","Alpha","Beta","Alpha","Beta")
+    val usersList : ArrayList<User> = arrayListOf(
+        User( "Janelle Hicks","Waterloo"),
+        User("Maddox Kirk", "Kitchener")
+    )
+
+    /*
+    "Ellis McBride",
+    "Denver Cobb",
+    "Aviana Ochoa",
+    "Winston Reed",
+    "Valentina Perkins",
+    "Kyrie Buckley",
+    "Theodora Monroe",
+    "Colby Ayers",
+    "Simone Guevara",
+    "Tommy Mullen",
+    "Shay Mullins",
+    "Allen Moses",
+    "Karter Wang",
+    "Cohen Gaines",
+    "Aya Moody",
+    "Ryland Chen"*/
     //val recyclerView : ArrayList<String> = ArrayList()
 
     val text: LiveData<String> = _text
+
+
 }
