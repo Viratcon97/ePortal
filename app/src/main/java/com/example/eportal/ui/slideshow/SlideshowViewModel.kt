@@ -11,11 +11,12 @@ class SlideshowViewModel : ViewModel() {
     }
     val usersList : ArrayList<User> = arrayListOf(
         User( "Janelle Hicks","Waterloo"),
-        User("Maddox Kirk", "Kitchener")
+        User("Maddox Kirk", "Kitchener"),
+        User("Ellis McBride","Waterloo")
     )
 
     /*
-    "Ellis McBride",
+    ,
     "Denver Cobb",
     "Aviana Ochoa",
     "Winston Reed",
