@@ -9,14 +9,13 @@ class SlideshowViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"
     }
-    val usersList : ArrayList<User> = arrayListOf(
+    val usersList : MutableList<User> = mutableListOf(
         User( "Janelle Hicks","Waterloo"),
         User("Maddox Kirk", "Kitchener"),
         User("Ellis McBride","Waterloo")
     )
 
     /*
-    ,
     "Denver Cobb",
     "Aviana Ochoa",
     "Winston Reed",

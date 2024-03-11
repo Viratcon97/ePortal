@@ -6,12 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import com.example.eportal.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+    var _binding: FragmentProfileBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,22 +22,31 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val profileViewModel =
             ViewModelProvider(this).get(ProfileViewModel::class.java)
 
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textViewProfile: TextView = binding.textProfile
-        val textViewAccountType : TextView = binding.textAccountType
+        binding.buttonAdd.setOnClickListener {
+            val name = binding.editTextName.text.toString()
+            val city = binding.editTextCity.text.toString()
 
-        profileViewModel.text.observe(viewLifecycleOwner) {
-            textViewProfile.text = it
+            if(name != "" && city != ""){
+                //Add Data
+                profileViewModel.name.value = name
+                profileViewModel.city.value = city
+                profileViewModel.displayText()
+            }else{
+                Toast.makeText(requireActivity(),"Add Data!",Toast.LENGTH_LONG).show()
+            }
         }
-        profileViewModel.text.observe(viewLifecycleOwner){
-            textViewAccountType.text = it
-        }
-        return root
     }
 
     override fun onDestroyView() {

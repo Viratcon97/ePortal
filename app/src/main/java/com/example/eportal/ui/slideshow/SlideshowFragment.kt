@@ -25,16 +25,21 @@ class SlideshowFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val slideshowViewModel =
             ViewModelProvider(this).get(SlideshowViewModel::class.java)
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
         /*val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+slideshowViewModel.text.observe(viewLifecycleOwner) {
+    textView.text = it
+}*/
 
         //No data found textview
         val errorNoDataFound : TextView = binding.textNoData
@@ -57,10 +62,21 @@ class SlideshowFragment : Fragment() {
 
             //Normal List
             val list = slideshowViewModel.usersList
-            val adapter = UserListAdapter(list)
+
+
+            val adapter = UserListAdapter(list, onDeleteClick = { _user, position ->
+                list.removeAt(position)
+                userListRecyclerView.adapter?.notifyItemRemoved(position)
+
+            }, onEditClick = { _user, position ->
+                //userListRecyclerView.adapter?.no
+            })
+
             userListRecyclerView.adapter = adapter
+
         }
-        return root
+
+
     }
 
     override fun onDestroyView() {
