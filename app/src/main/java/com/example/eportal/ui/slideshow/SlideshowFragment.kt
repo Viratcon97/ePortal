@@ -36,11 +36,6 @@ class SlideshowFragment : Fragment() {
         val slideshowViewModel =
             ViewModelProvider(this).get(SlideshowViewModel::class.java)
 
-        /*val textView: TextView = binding.textSlideshow
-slideshowViewModel.text.observe(viewLifecycleOwner) {
-    textView.text = it
-}*/
-
         //No data found textview
         val errorNoDataFound : TextView = binding.textNoData
 
@@ -61,19 +56,26 @@ slideshowViewModel.text.observe(viewLifecycleOwner) {
             //val list = slideshowViewModel.recyclerView.sorted().toMutableList()
 
             //Normal List
+
             val list = slideshowViewModel.usersList
 
-
-            val adapter = UserListAdapter(list, onDeleteClick = { _user, position ->
+            /*val adapter = UserListAdapter(list, onDeleteClick = { _user, position ->
                 list.removeAt(position)
-                userListRecyclerView.adapter?.notifyItemRemoved(position)
-
             }, onEditClick = { _user, position ->
                 //userListRecyclerView.adapter?.no
-            })
-
+                _user.name = "V"
+                _user.city = "W"
+                userListRecyclerView.adapter?.notifyItemChanged(position)
+            })*/
+            val adapter = UserListAdapter(list)
             userListRecyclerView.adapter = adapter
 
+        }
+        binding.btnAdd.setOnClickListener {
+            val name = "A"
+            val city = "K"
+            slideshowViewModel.usersList.add(User(name,city))
+            userListRecyclerView.adapter?.notifyDataSetChanged()
         }
 
 
@@ -85,6 +87,6 @@ slideshowViewModel.text.observe(viewLifecycleOwner) {
     }
 }
 data class User(
-    val name : String,
-    val city : String
+    var name : String,
+    var city : String
 )

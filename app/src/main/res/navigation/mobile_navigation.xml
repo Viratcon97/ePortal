@@ -27,4 +27,14 @@
         android:name="com.example.eportal.ui.profile.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="com.example.eportal.ui.weather.WeatherFragment"
+        android:label="@string/menu_weather"
+        tools:layout="@layout/fragment_weather" />
+    <fragment
+        android:id="@+id/nav_recipes"
+        android:name="com.example.eportal.ui.recipes.RecipesFragment"
+        android:label="@string/menu_recipes"
+        tools:layout="@layout/fragment_recipes" />
 </navigation>

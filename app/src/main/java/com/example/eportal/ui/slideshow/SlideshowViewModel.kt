@@ -12,13 +12,14 @@ class SlideshowViewModel : ViewModel() {
     val usersList : MutableList<User> = mutableListOf(
         User( "Janelle Hicks","Waterloo"),
         User("Maddox Kirk", "Kitchener"),
-        User("Ellis McBride","Waterloo")
+        User("Ellis McBride","Waterloo"),
+        User("Denver Cobb","Cambridge"),
+        User("Aviana Ochoa","Waterloo"),
+        User("Winston Reed","Kitchener")
     )
 
     /*
-    "Denver Cobb",
-    "Aviana Ochoa",
-    "Winston Reed",
+    ,
     "Valentina Perkins",
     "Kyrie Buckley",
     "Theodora Monroe",
