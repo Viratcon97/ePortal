@@ -41,8 +41,7 @@ class WeatherFragment : Fragment() {
     private fun subscribe() {
         weatherViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
             // Is sending the API request
-            Log.d("DATA",isLoading.toString())
-
+            binding.progressBar.visibility = View.VISIBLE
         }
 
         weatherViewModel.isError.observe(viewLifecycleOwner) { isError ->
@@ -53,6 +52,7 @@ class WeatherFragment : Fragment() {
 
         weatherViewModel.weatherData.observe(viewLifecycleOwner) { weatherData ->
             // Display weather data to the UI
+            binding.progressBar.visibility = View.GONE
             setData(weatherData)
         }
     }

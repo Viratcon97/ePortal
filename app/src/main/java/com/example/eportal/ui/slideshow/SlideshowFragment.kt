@@ -59,15 +59,19 @@ class SlideshowFragment : Fragment() {
 
             val list = slideshowViewModel.usersList
 
-            /*val adapter = UserListAdapter(list, onDeleteClick = { _user, position ->
-                list.removeAt(position)
+            val adapter = UserListAdapter(list, onDeleteClick = { _user, position ->
+                if (position >= 0 && position < list.size) {
+                    list.removeAt(position)
+                    userListRecyclerView.adapter?.notifyItemRemoved(position)
+                    userListRecyclerView.adapter?.notifyItemRangeChanged(position,list.size)
+                }
             }, onEditClick = { _user, position ->
                 //userListRecyclerView.adapter?.no
                 _user.name = "V"
                 _user.city = "W"
                 userListRecyclerView.adapter?.notifyItemChanged(position)
-            })*/
-            val adapter = UserListAdapter(list)
+            })
+            //val adapter = UserListAdapter(list)
             userListRecyclerView.adapter = adapter
 
         }

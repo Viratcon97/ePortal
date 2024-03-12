@@ -7,6 +7,7 @@ android {
     namespace = "com.example.eportal"
     compileSdk = 33
 
+
     defaultConfig {
         applicationId = "com.example.eportal"
         minSdk = 30
@@ -15,6 +16,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
     buildTypes {
@@ -36,7 +39,10 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
 }
+
 
 dependencies {
 
@@ -53,8 +59,14 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    //
+    //Retrofit, GSON
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    //Button
+    implementation("com.github.dmytrodanylyk:android-morphing-button:1.0")
+
+    //Dialog
+    implementation("cn.pedant.sweetalert:library:1.3")
 }

@@ -50,11 +50,18 @@
             android:minHeight="48dp"
             android:textSize="16sp" />
 
-        <Button
+<!--        <Button
             android:id="@+id/buttonAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/add" />
+            android:text="@string/add" />-->
+
+        <com.dd.morphingbutton.MorphingButton
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:textColor="@color/white"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

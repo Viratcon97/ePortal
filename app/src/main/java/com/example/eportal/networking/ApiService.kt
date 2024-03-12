@@ -21,6 +21,6 @@ interface ApiService {
     fun getRecipesList(
         @Header("X-RapidAPI-Key") key : String = ApiConfig.RAPID_API_KEY,
         @Query("from") from : Int = 0,
-        @Query("size") size : Int = 20
+        @Query("size") size : Int = 1
     ) : Call<RecipesResponse>
 }

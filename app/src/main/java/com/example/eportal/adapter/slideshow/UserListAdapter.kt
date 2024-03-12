@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.eportal.databinding.LayoutUserlistBinding
 import com.example.eportal.ui.slideshow.User
 
-class UserListAdapter(private val usersArrayList: MutableList<User>) : RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
+class UserListAdapter(private val usersArrayList: MutableList<User>, private val onDeleteClick: (User, Int) -> Unit, private val onEditClick: (User, Int) -> Unit)  : RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
 
     lateinit var binding : LayoutUserlistBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,13 +24,14 @@ class UserListAdapter(private val usersArrayList: MutableList<User>) : RecyclerV
         holder.textViewName.text = usersArrayList[position].name
         holder.textViewCity.text = usersArrayList[position].city
         holder.buttonDelete.setOnClickListener {
-            removeItem(position)
-        }
+            onDeleteClick(usersArrayList[position],position)
 
-        /*holder.buttonEdit.setOnClickListener {
+        }
+        holder.buttonEdit.setOnClickListener {
             onEditClick(usersArrayList[position], position)
-        }*/
+        }
     }
+
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
 
         var textViewName = binding.userName
@@ -39,11 +40,4 @@ class UserListAdapter(private val usersArrayList: MutableList<User>) : RecyclerV
         var buttonEdit = binding.btnEdit
     }
 
-    private fun removeItem(position: Int){
-        if (position >= 0 && position < usersArrayList.size) {
-            usersArrayList.removeAt(position)
-            notifyItemRemoved(position)
-            notifyItemRangeChanged(position,usersArrayList.size)
-        }
-    }
 }

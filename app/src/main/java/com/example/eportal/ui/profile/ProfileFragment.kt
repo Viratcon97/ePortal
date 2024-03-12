@@ -1,5 +1,6 @@
 package com.example.eportal.ui.profile
 
+import android.graphics.Color
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.dd.morphingbutton.MorphingButton
 import com.example.eportal.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -32,7 +34,6 @@ class ProfileFragment : Fragment() {
 
         val profileViewModel =
             ViewModelProvider(this).get(ProfileViewModel::class.java)
-
 
         binding.buttonAdd.setOnClickListener {
             val name = binding.editTextName.text.toString()
