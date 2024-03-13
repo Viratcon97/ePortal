@@ -55,6 +55,7 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -68,5 +69,5 @@ dependencies {
     implementation("com.github.dmytrodanylyk:android-morphing-button:1.0")
 
     //Dialog
-    implementation("cn.pedant.sweetalert:library:1.3")
+    implementation("com.afollestad.material-dialogs:core:3.3.0")
 }

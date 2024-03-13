@@ -4,14 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eportal.databinding.LayoutUserlistBinding
+import com.example.eportal.databinding.LayoutUserBinding
 import com.example.eportal.ui.slideshow.User
 
 class UserListAdapter(private val usersArrayList: MutableList<User>, private val onDeleteClick: (User, Int) -> Unit, private val onEditClick: (User, Int) -> Unit)  : RecyclerView.Adapter<UserListAdapter.ViewHolder>() {
 
-    lateinit var binding : LayoutUserlistBinding
+    lateinit var binding : LayoutUserBinding
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        binding = LayoutUserlistBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = LayoutUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding.root)
     }
 

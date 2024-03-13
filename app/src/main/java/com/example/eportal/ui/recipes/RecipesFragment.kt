@@ -7,10 +7,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.eportal.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.eportal.adapter.slideshow.RecipesListAdapter
 import com.example.eportal.databinding.FragmentRecipesBinding
-import com.example.eportal.databinding.FragmentWeatherBinding
-import com.example.eportal.ui.weather.WeatherViewModel
+import com.example.eportal.model.RecipesResponse
 
 class RecipesFragment : Fragment() {
 
@@ -36,13 +37,19 @@ class RecipesFragment : Fragment() {
         recipesViewModel = ViewModelProvider(this).get(RecipesViewModel::class.java)
         recipesViewModel.getRecipesList()
         subscribe()
+
+        //Recycler View setup
+        val userListRecyclerView : RecyclerView = binding.recyclerView
+        val linearLayoutManager = LinearLayoutManager(activity)
+        userListRecyclerView.layoutManager = linearLayoutManager
+
     }
 
     private fun subscribe() {
         recipesViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
             // Is sending the API request
             Log.d("DATA",isLoading.toString())
-
+            binding.progressBar.visibility = View.VISIBLE
         }
 
         recipesViewModel.isError.observe(viewLifecycleOwner) { isError ->
@@ -53,7 +60,15 @@ class RecipesFragment : Fragment() {
 
         recipesViewModel.recipesData.observe(viewLifecycleOwner) { recipesData ->
             // Display weather data to the UI
-            Log.d("DATA",recipesData.toString())
+            binding.progressBar.visibility = View.GONE
+            Log.d("TAG",recipesData.results.toString())
+            setRecipesData(recipesData)
         }
+    }
+
+    private fun setRecipesData(recipesData: RecipesResponse?) {
+        val list = recipesData?.results
+        val adapter = RecipesListAdapter(list)
+        binding.recyclerView.adapter = adapter
     }
 }
