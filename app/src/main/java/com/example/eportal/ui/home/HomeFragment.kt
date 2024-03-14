@@ -1,16 +1,22 @@
 package com.example.eportal.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.eportal.databinding.FragmentHomeBinding
 import com.example.eportal.databinding.FragmentRecipesBinding
+import com.example.eportal.utils.Constant.Companion.CREDENTIAL
+import java.time.LocalDateTime
+import java.util.Date
+import java.util.Timer
 
 class HomeFragment : Fragment() {
 
@@ -37,7 +43,17 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        val timer = object  : CountDownTimer(5000,100){
+        //Login Status Shared preference
+        val sharedPreference = requireActivity().getSharedPreferences(CREDENTIAL, Context.MODE_PRIVATE)
+        val loginStatus = sharedPreference.getBoolean("loginStatus", false)
+        Toast.makeText(requireActivity(),loginStatus.toString(),Toast.LENGTH_LONG).show()
+
+        //Current Date time
+        val date = LocalDateTime.now()
+        binding.textCurrentDateTime.text = date.toString()
+
+        //Timer
+        val timer = object  : CountDownTimer(1000,1){
             override fun onTick(millisUntilFinished: Long) {
                 binding.textHome.text = millisUntilFinished.toString()
             }

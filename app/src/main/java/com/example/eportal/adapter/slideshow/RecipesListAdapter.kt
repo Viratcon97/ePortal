@@ -1,5 +1,6 @@
 package com.example.eportal.adapter.slideshow
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +23,8 @@ class RecipesListAdapter(private val recipesList: List<ResultsItem?>?) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.text.text = "recipesList?.get(position)."
+        recipesList?.get(position)?.toString()?.let { Log.d("ADAPTER", it) }
+        holder.text.text = recipesList?.get(position)?.toString()
     }
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
         val text = recipesListBinding.textView

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.materialdialogs.MaterialDialog
@@ -87,6 +88,31 @@ class SlideshowFragment : Fragment() {
             //val adapter = UserListAdapter(list)
             userListRecyclerView.adapter = adapter
 
+            val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+                0,
+                ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+            ){
+                override fun onMove(
+                    recyclerView: RecyclerView,
+                    viewHolder: RecyclerView.ViewHolder,
+                    target: RecyclerView.ViewHolder
+                ): Boolean {
+                    return false
+                }
+
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                    if (viewHolder.adapterPosition >= 0 && viewHolder.adapterPosition < list.size) {
+                        list.removeAt(viewHolder.adapterPosition)
+                        userListRecyclerView.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
+                        userListRecyclerView.adapter?.notifyItemRangeChanged(
+                            viewHolder.adapterPosition,
+                            list.size
+                        )
+                    }
+                }
+
+            })
+            itemTouchHelper.attachToRecyclerView(binding.userList)
         }
         binding.btnAdd.setOnClickListener {
             val name = "A"

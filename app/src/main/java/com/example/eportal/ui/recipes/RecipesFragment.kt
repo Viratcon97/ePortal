@@ -11,10 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.eportal.adapter.slideshow.RecipesListAdapter
 import com.example.eportal.databinding.FragmentRecipesBinding
-import com.example.eportal.model.RecipesResponse
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.example.eportal.model.ResultsItem
 
 class RecipesFragment : Fragment() {
 
@@ -59,19 +56,19 @@ class RecipesFragment : Fragment() {
             // Encountered an error in the process
             Log.d("DATA",isError.toString())
 
+
         }
 
         recipesViewModel.recipesData.observe(viewLifecycleOwner) { recipesData ->
             // Display weather data to the UI
             binding.progressBar.visibility = View.GONE
             Log.d("TAG",recipesData.results.toString())
-            setRecipesData(recipesData)
+            setRecipesData(recipesData.results)
         }
     }
 
-    private fun setRecipesData(recipesData: RecipesResponse?) {
-        val list = recipesData?.results
-        val adapter = RecipesListAdapter(list)
+    private fun setRecipesData(recipesData: List<ResultsItem?>?) {
+        val adapter = RecipesListAdapter(recipesData)
         binding.recyclerView.adapter = adapter
     }
 }
