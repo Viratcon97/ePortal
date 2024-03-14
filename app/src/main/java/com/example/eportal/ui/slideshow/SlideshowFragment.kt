@@ -59,7 +59,6 @@ class SlideshowFragment : Fragment() {
             //val list = slideshowViewModel.recyclerView.sorted().toMutableList()
 
             //Normal List
-
             val list = slideshowViewModel.usersList
 
             val adapter = UserListAdapter(list, onDeleteClick = { _user, position ->
@@ -88,6 +87,7 @@ class SlideshowFragment : Fragment() {
             //val adapter = UserListAdapter(list)
             userListRecyclerView.adapter = adapter
 
+            //Swipe Delete Operation
             val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
                 0,
                 ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT

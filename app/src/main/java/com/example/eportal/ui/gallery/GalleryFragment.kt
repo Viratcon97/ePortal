@@ -1,22 +1,21 @@
 package com.example.eportal.ui.gallery
 
-import android.app.AlertDialog
-import android.app.Dialog
-import android.content.ClipData.Item
-import android.content.DialogInterface
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.RecyclerView
 import com.example.eportal.R
 import com.example.eportal.databinding.FragmentGalleryBinding
+import com.example.eportal.model.JsonResponse
+import com.google.gson.Gson
+import org.json.JSONObject
+import java.io.InputStream
+import java.nio.charset.Charset
 
 class GalleryFragment : Fragment() {
 
@@ -45,6 +44,11 @@ class GalleryFragment : Fragment() {
         val adapter = ArrayAdapter(requireActivity(), android.R.layout.simple_list_item_1, galleryViewModel.itemList)
         binding.listView.adapter = adapter
 
+        //Reading JSON File
+        val jsonFileName = R.raw.dummy
+        val jsonData = readJsonFromRaw(requireActivity(),jsonFileName)
+        val gson = Gson()
+        val data = gson.fromJson(jsonData.toString(),JsonResponse::class.java)
 
 
         /*binding.listView.setOnItemClickListener { parent, view, position, id ->
@@ -61,6 +65,13 @@ class GalleryFragment : Fragment() {
             //Toast.makeText(requireActivity(),selectedItem, Toast.LENGTH_LONG).show()
         }*/
     }
+
+    private fun readJsonFromRaw(context: Context, resourceId: Int): JSONObject {
+        val inputStream: InputStream = context.resources.openRawResource(resourceId)
+        val json = inputStream.bufferedReader(Charset.defaultCharset()).use { it.readText() }
+        return JSONObject(json)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
