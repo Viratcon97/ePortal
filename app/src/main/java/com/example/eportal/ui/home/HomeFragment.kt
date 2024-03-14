@@ -1,13 +1,16 @@
 package com.example.eportal.ui.home
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.eportal.databinding.FragmentHomeBinding
+import com.example.eportal.databinding.FragmentRecipesBinding
 
 class HomeFragment : Fragment() {
 
@@ -17,24 +20,34 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private lateinit var homeViewModel : HomeViewModel
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        homeViewModel =
+            ViewModelProvider(this).get(HomeViewModel::class.java)
+
+        val timer = object  : CountDownTimer(5000,100){
+            override fun onTick(millisUntilFinished: Long) {
+                binding.textHome.text = millisUntilFinished.toString()
+            }
+
+            override fun onFinish() {
+                binding.textHome.text = "Task Completed!"
+            }
+        }
+        timer.start()
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

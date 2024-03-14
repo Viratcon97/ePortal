@@ -7,8 +7,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.eportal.databinding.FragmentWeatherBinding
 import com.example.eportal.model.WeatherResponse
+import com.squareup.picasso.Picasso
 
 class WeatherFragment : Fragment() {
 
@@ -62,6 +64,13 @@ class WeatherFragment : Fragment() {
         "Feels Like - ${weatherData.current?.feelslikeC}".also { binding.textFeelsLike.text = it }
         "Country - ${weatherData.location?.country}".also { binding.textCountry.text = it }
         "City - ${weatherData.location?.name}".also { binding.textCity.text = it }
+        //weatherData.current.condition.icon
+        val imagePath = weatherData.current?.condition?.icon
+        if (imagePath.equals("")){
+            Toast.makeText(requireActivity(),"No picture found",Toast.LENGTH_LONG).show()
+        }else{
+            Picasso.get().load(imagePath).into(binding.imageViewWeather)
+        }
     }
 
     override fun onDestroyView() {

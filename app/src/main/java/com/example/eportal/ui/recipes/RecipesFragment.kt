@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.eportal.adapter.slideshow.RecipesListAdapter
 import com.example.eportal.databinding.FragmentRecipesBinding
 import com.example.eportal.model.RecipesResponse
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class RecipesFragment : Fragment() {
 
