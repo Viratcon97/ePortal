@@ -1,4 +1,4 @@
-package com.example.eportal.adapter.slideshow
+package com.example.eportal.adapter
 
 import android.view.LayoutInflater
 import android.view.View

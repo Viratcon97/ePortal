@@ -1,6 +1,5 @@
-package com.example.eportal.adapter.slideshow
+package com.example.eportal.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,10 +22,13 @@ class RecipesListAdapter(private val recipesList: List<ResultsItem?>?) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        recipesList?.get(position)?.toString()?.let { Log.d("ADAPTER", it) }
-        holder.text.text = recipesList?.get(position)?.toString()
+        holder.recipeTitle.text = recipesList?.get(position)?.name
+        holder.recipesDescription.text = recipesList?.get(position)?.country
+        holder.recipesNutrition.text = recipesList?.get(position)?.nutrition.toString()
     }
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        val text = recipesListBinding.textView
+        val recipeTitle = recipesListBinding.textViewRecipeTitle
+        val recipesDescription = recipesListBinding.textViewRecipesDescription
+        val recipesNutrition = recipesListBinding.textViewNutrition
     }
 }

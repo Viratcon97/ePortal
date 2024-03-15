@@ -3,5 +3,5 @@ package com.example.eportal.ui.game
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
 }

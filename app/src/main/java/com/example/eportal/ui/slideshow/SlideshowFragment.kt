@@ -1,6 +1,5 @@
 package com.example.eportal.ui.slideshow
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.afollestad.materialdialogs.MaterialDialog
-import com.example.eportal.adapter.slideshow.UserListAdapter
+import com.example.eportal.adapter.UserListAdapter
 import com.example.eportal.databinding.FragmentSlideshowBinding
 
 class SlideshowFragment : Fragment() {

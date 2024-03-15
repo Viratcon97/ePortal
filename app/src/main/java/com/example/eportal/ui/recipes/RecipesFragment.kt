@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eportal.adapter.slideshow.RecipesListAdapter
+import com.example.eportal.adapter.RecipesListAdapter
 import com.example.eportal.databinding.FragmentRecipesBinding
 import com.example.eportal.model.ResultsItem
 
