@@ -1,5 +1,6 @@
 package com.example.eportal.ui.slideshow
 
+import android.content.ClipData.Item
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -86,6 +87,22 @@ class SlideshowFragment : Fragment() {
             //val adapter = UserListAdapter(list)
             userListRecyclerView.adapter = adapter
 
+            val item = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
+                0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
+            ){
+                override fun onMove(
+                    recyclerView: RecyclerView,
+                    viewHolder: RecyclerView.ViewHolder,
+                    target: RecyclerView.ViewHolder
+                ): Boolean {
+                    return false
+                }
+
+                override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+
+                }
+
+            })
             //Swipe Delete Operation
             val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
                 0,
@@ -103,10 +120,10 @@ class SlideshowFragment : Fragment() {
                     if (viewHolder.adapterPosition >= 0 && viewHolder.adapterPosition < list.size) {
                         list.removeAt(viewHolder.adapterPosition)
                         userListRecyclerView.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
-                        userListRecyclerView.adapter?.notifyItemRangeChanged(
+                        /*userListRecyclerView.adapter?.notifyItemRangeChanged(
                             viewHolder.adapterPosition,
                             list.size
-                        )
+                        )*/
                     }
                 }
 
