@@ -25,10 +25,16 @@ class RecipesListAdapter(private val recipesList: List<ResultsItem?>?) :
         holder.recipeTitle.text = recipesList?.get(position)?.name
         holder.recipesDescription.text = recipesList?.get(position)?.country
         holder.recipesNutrition.text = recipesList?.get(position)?.nutrition.toString()
+        holder.nutritionProteinText.text = recipesList?.get(position)?.nutrition?.protein.toString()
+        holder.nutritionFatText.text = recipesList?.get(position)?.nutrition?.fat.toString()
+        holder.nutritionCaloriesText.text = recipesList?.get(position)?.nutrition?.calories.toString()
     }
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
         val recipeTitle = recipesListBinding.textViewRecipeTitle
         val recipesDescription = recipesListBinding.textViewRecipesDescription
         val recipesNutrition = recipesListBinding.textViewNutrition
+        val nutritionProteinText = recipesListBinding.textViewProtein
+        val nutritionFatText = recipesListBinding.textViewFat
+        val nutritionCaloriesText = recipesListBinding.textViewCalories
     }
 }

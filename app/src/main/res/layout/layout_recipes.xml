@@ -110,36 +110,33 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textViewProtein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    app:layout_constraintBottom_toBottomOf="@+id/textView4"
-                    app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFat"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewFat"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView4" />
+                    app:layout_constraintTop_toTopOf="@+id/textViewFat" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textViewFat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                    app:layout_constraintEnd_toStartOf="@+id/textView5"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewCalories"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewCalories"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+                    app:layout_constraintStart_toEndOf="@+id/textViewProtein"
+                    app:layout_constraintTop_toTopOf="@+id/textViewCalories" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textViewCalories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:layout_marginTop="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textView4"
+                    app:layout_constraintStart_toEndOf="@+id/textViewFat"
                     app:layout_constraintTop_toBottomOf="@+id/cardView2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
