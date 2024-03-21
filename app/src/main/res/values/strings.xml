@@ -21,4 +21,5 @@
     <string name="BtnAdd">Add</string>
     <string name="menu_recipes">Recipes</string>
     <string name="title_nutrition_fact">Nutrition Fact</string>
+    <string name="txtProtein">"Protein - "</string>
 </resources>

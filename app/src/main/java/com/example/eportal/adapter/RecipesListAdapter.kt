@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.eportal.R
 import com.example.eportal.databinding.LayoutRecipesBinding
 import com.example.eportal.model.ResultsItem
 
