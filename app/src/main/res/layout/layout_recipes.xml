@@ -3,12 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="5dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cardBackgroundLight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,28 +40,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/textViewRecipesDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewRecipeTitle" />
-
-                <TextView
+                <!--<TextView
                     android:id="@+id/textViewNutrition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewRecipesDescription" />
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRecipesDescription" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -83,52 +79,142 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="@string/title_nutrition_fact"
-                        android:textFontWeight="700"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:layout_conversion_absoluteHeight="27dp"
-                        tools:layout_conversion_absoluteWidth="411dp"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="112dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/title_country_of_origin"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textViewOriginCountry"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:dividerColor="@color/white"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:text="@string/title_nutrition_fact"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:layout_conversion_absoluteHeight="27dp"
+                                tools:layout_conversion_absoluteWidth="411dp"
+                                tools:layout_editor_absoluteX="0dp"
+                                tools:layout_editor_absoluteY="112dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:id="@+id/textViewCalories"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/textViewFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/textViewFiber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/textViewProtein"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/textViewSugar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:dividerColor="@color/white"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewCredit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_gravity="end"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="14sp"
+                                android:textStyle="bold"/>
+
+                        </LinearLayout>
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            app:dividerColor="@color/white"/>
+
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/textViewProtein"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/textViewFat"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewFat"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textViewFat" />
-
-                <TextView
-                    android:id="@+id/textViewFat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="@+id/textViewCalories"
-                    app:layout_constraintEnd_toStartOf="@+id/textViewCalories"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textViewProtein"
-                    app:layout_constraintTop_toTopOf="@+id/textViewCalories" />
-
-                <TextView
-                    android:id="@+id/textViewCalories"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/textViewFat"
-                    app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

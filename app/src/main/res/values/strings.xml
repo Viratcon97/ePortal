@@ -21,5 +21,6 @@
     <string name="BtnAdd">Add</string>
     <string name="menu_recipes">Recipes</string>
     <string name="title_nutrition_fact">Nutrition Fact</string>
-    <string name="txtProtein">"Protein - "</string>
+    <string name="txtProtein">"Protein - %d$"</string>
+    <string name="title_country_of_origin">Country of Origin</string>
 </resources>
