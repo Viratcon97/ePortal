@@ -35,7 +35,7 @@ class WeatherFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         weatherViewModel = ViewModelProvider(this).get(WeatherViewModel::class.java)
-        weatherViewModel.getWeatherData("new york")
+        weatherViewModel.getWeatherData("waterloo")
         subscribe()
 
     }
@@ -61,7 +61,7 @@ class WeatherFragment : Fragment() {
 
     private fun setData(weatherData: WeatherResponse) {
 
-        "Feels Like - ${weatherData.current?.feelslikeC}".also { binding.textFeelsLike.text = it }
+        /*"Feels Like - ${weatherData.current?.feelslikeC}".also { binding.textFeelsLike.text = it }
         "Country - ${weatherData.location?.country}".also { binding.textCountry.text = it }
         "City - ${weatherData.location?.name}".also { binding.textCity.text = it }
         //weatherData.current.condition.icon
@@ -70,7 +70,7 @@ class WeatherFragment : Fragment() {
             Toast.makeText(requireActivity(),"No picture found",Toast.LENGTH_LONG).show()
         }else{
             Picasso.get().load(imagePath).into(binding.imageViewWeather)
-        }
+        }*/
     }
 
     override fun onDestroyView() {

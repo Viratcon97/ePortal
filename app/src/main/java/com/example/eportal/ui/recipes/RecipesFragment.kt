@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.eportal.adapter.RecipesListAdapter
 import com.example.eportal.databinding.FragmentRecipesBinding
 import com.example.eportal.model.ResultsItem
+import com.example.eportal.utils.Constant
 
 class RecipesFragment : Fragment() {
 
@@ -54,9 +55,7 @@ class RecipesFragment : Fragment() {
 
         recipesViewModel.isError.observe(viewLifecycleOwner) { isError ->
             // Encountered an error in the process
-            Log.d("DATA",isError.toString())
-
-
+            Constant.errorDialog(requireActivity(),"Network Issue!")
         }
 
         recipesViewModel.recipesData.observe(viewLifecycleOwner) { recipesData ->

@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+<!--        <TextView
             android:id="@+id/textFeelsLike"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -42,12 +42,7 @@
             android:id="@+id/textCity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"/>
-
-        <ImageView
-            android:id="@+id/imageViewWeather"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textSize="14sp"/>-->
 
     </LinearLayout>
 
