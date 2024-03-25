@@ -61,16 +61,22 @@ class WeatherFragment : Fragment() {
 
     private fun setData(weatherData: WeatherResponse) {
 
-        /*"Feels Like - ${weatherData.current?.feelslikeC}".also { binding.textFeelsLike.text = it }
-        "Country - ${weatherData.location?.country}".also { binding.textCountry.text = it }
-        "City - ${weatherData.location?.name}".also { binding.textCity.text = it }
-        //weatherData.current.condition.icon
-        val imagePath = weatherData.current?.condition?.icon
-        if (imagePath.equals("")){
-            Toast.makeText(requireActivity(),"No picture found",Toast.LENGTH_LONG).show()
-        }else{
-            Picasso.get().load(imagePath).into(binding.imageViewWeather)
-        }*/
+        weatherData.current?.tempC.also {
+            binding.textViewTemperature.text = it.toString()
+        }
+
+        "Feels Like ${weatherData.current?.feelslikeC}".also { binding.textViewFeelsLike.text = it }
+        binding.textViewCity.text = weatherData.location?.name
+        binding.textViewCountry.text = weatherData.location?.country
+        /*  "Country - ${weatherData.location?.country}".also { binding.textCountry.text = it }
+          "City - ${weatherData.location?.name}".also { binding.textCity.text = it }
+          //weatherData.current.condition.icon
+          val imagePath = weatherData.current?.condition?.icon
+          if (imagePath.equals("")){
+              Toast.makeText(requireActivity(),"No picture found",Toast.LENGTH_LONG).show()
+          }else{
+              Picasso.get().load(imagePath).into(binding.imageViewWeather)
+          }*/
     }
 
     override fun onDestroyView() {
