@@ -1,0 +1,182 @@
+[
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_game.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_game.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_menu_recipes.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_menu_recipes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_slideshow.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_nav_header_main.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_eportal.png.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\eportal.png"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "com.example.eportal.app-merged_res-52:/layout_fragment_weather.xml.flat",
+        "source": "com.example.eportal.app-main-54:/layout/fragment_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_layout_recipes.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\layout_recipes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\content_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_menu_profile.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_menu_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_support_48.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\support_48.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_menu_slideshow.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_app_bar_main.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_location_24.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\location_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_gallery.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_layout_user.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\layout_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\menu_main.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_recipes.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_recipes.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\raw_dummy.json.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\raw\\dummy.json"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\layout_fragment_weather.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\layout\\fragment_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\drawable_ic_menu_weather.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\drawable\\ic_menu_weather.xml"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-merged_res-52:\\menu_activity_main_drawer.xml.flat",
+        "source": "C:\\Users\\Virat\\.gradle\\daemon\\8.0\\com.example.eportal.app-main-54:\\menu\\activity_main_drawer.xml"
+    }
+]
